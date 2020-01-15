@@ -2,7 +2,7 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/app.js',
     output: {
         path: path.join(__dirname, 'public'),
@@ -22,8 +22,9 @@ module.exports = {
             ]
         }]
     },
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'source-map',
     devServer: {
-        contentBase: path.join(__dirname, 'public')
+        contentBase: path.join(__dirname, 'public'),
+        port: 8000
     }
 };
